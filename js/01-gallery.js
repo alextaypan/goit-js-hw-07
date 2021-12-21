@@ -16,7 +16,7 @@ const galleryRef = document.querySelector(".gallery");
 
 const galleryMarkup = galleryItems
   .map(({ preview, original, description }) => {
-    return `<li class="gallery__item">
+    return `<div class="gallery__item">
     <a
       class="gallery__link"
       href="${original}"
@@ -28,7 +28,7 @@ const galleryMarkup = galleryItems
         alt="${description}"
       />
     </a>
-    </li> `;
+    </div> `;
   })
   .join("");
 galleryRef.insertAdjacentHTML("afterbegin", galleryMarkup);

@@ -39,7 +39,6 @@ function onOpenModal(event) {
   event.preventDefault();
   if (event.target.nodeName !== "IMG") return;
   const dataSrc = event.target.dataset.source;
-  console.log(dataSrc);
   instance = basicLightbox.create(
     `<img src="${dataSrc}" width="800" height="600">`
   );
